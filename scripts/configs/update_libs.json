@@ -1,0 +1,12 @@
+{
+  "game_dlls": [
+    "sts2",
+    "0Harmony"
+  ],
+  "nuget_packages": [
+    "GodotSharp",
+    "STS2.RitsuLib"
+  ],
+  "extract_game_pck": true
+}
+

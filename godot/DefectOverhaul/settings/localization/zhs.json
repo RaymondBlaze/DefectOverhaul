@@ -1,0 +1,6 @@
+{
+  "defectoverhaul.mod.displayName": "故障机器人重置",
+  "defectoverhaul.page.title": "设置",
+  "defectoverhaul.section.cardPatches.title": "卡牌修改",
+  "defectoverhaul.section.cardPatches.description": "启用/禁用特定卡牌的修改，在下次启动游戏时生效。"
+}

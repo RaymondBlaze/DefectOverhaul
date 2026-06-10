@@ -1,0 +1,50 @@
+{
+  "ADAPTIVE_STRIKE": {
+    "ADAPTIVE_STRIKE.description": "Deal {Damage:diff()} damage.\nTransform a card in your [gold]Discard Pile[/gold] into a 0{energyPrefix:energyIcons(1)} copy of this card."
+  },
+  "BARRAGE": {
+    "BARRAGE.description": "Deal {Damage:diff()} damage to ALL enemies for each [gold]Channeled[/gold] Orb.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}"
+  },
+  "CONSUMING_SHADOW": {
+    "CONSUMING_SHADOW.description": "[gold]Channel[/gold] {Repeat:diff()} [gold]Dark[/gold].\nWhenever you [gold]Evoke[/gold] an [gold]Dark[/gold] Orb, trigger the passive ability of all other [gold]Dark[/gold] Orbs."
+  },
+  "COOLANT": {
+    "COOLANT.description": "Whenever you [gold]Channel[/gold] an Orb, gain {CoolantPower:diff()} [gold]Block[/gold]."
+  },
+  "FTL": {
+    "FTL.description": "Deal {Damage:diff()} damage.\nPut a random 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold]."
+  },
+  "HAILSTORM": {
+    "HAILSTORM.description": "[gold]Channel[/gold] {Repeat:diff()} [gold]Frost[/gold].\nWhenever you gain [gold]Block[/gold] from a [gold]Frost[/gold] Orb, deal that much damage to a random enemy."
+  },
+  "HELIX_DRILL": {
+    "HELIX_DRILL.description": "Deal {Damage:diff()} damage for each 0{energyPrefix:energyIcons(1)} card played this combat.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}"
+  },
+  "HOTFIX": {
+    "HOTFIX.description": "Gain {FocusPower:diff()} [gold]Focus[/gold] this turn.\nIncrease this card's cost by {Energy:energyIcons()} this turn."
+  },
+  "ICE_LANCE": {
+    "ICE_LANCE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each [gold]Frost[/gold] Orb [gold]Channeled[/gold] this combat.\n[gold]Channel[/gold] {Repeat:diff()} [gold]Frost[/gold]."
+  },
+  "ITERATION": {
+    "ITERATION.description": "Whenever you draw a Status, draw {IterationPower:diff()} {IterationPower:plural:card|cards}."
+  },
+  "LEAP": {
+    "LEAP.description": "Gain {Block:diff()} [gold]Block[/gold].\nReduce this card's cost to 0 {energyPrefix:energyIcons(1)}."
+  },
+  "LOOP": {
+    "LOOP.description": "At the end of your turn, trigger the passive ability of all your Orbs {Loop:diff()} additional time."
+  },
+  "RAINBOW": {
+    "RAINBOW.description": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].\n[gold]Channel[/gold] 1 [gold]Frost[/gold].\n[gold]Channel[/gold] 1 [gold]Dark[/gold].\nWhenever you [gold]Channel[/gold] an Orb, this card costs {Energy:energyIcons()} less until played."
+  },
+  "SMOKESTACK": {
+    "SMOKESTACK.description": "Status gain [gold]Ethereal[/gold].\n Whenever you [gold]Exhaust[/gold] a Status, gain {SmokestackPower:diff()} [gold]Block[/gold]."
+  },
+  "SWEEPING_BEAM": {
+    "SWEEPING_BEAM.description": "Deal {Damage:diff()} damage to ALL enemies.\nDraw 1 card for each enemy.{InCombat:\n(Draw {CalculatedCards:diff()} {CalculatedCards:plural:card|cards})|}"
+  },
+  "UPROAR": {
+    "UPROAR.description": "Deal {Damage:diff()} damage twice.\nPlay {Cards:diff()} random {Cards:plural:Attack|Attacks} from your [gold]Draw Pile[/gold]."
+  }
+}

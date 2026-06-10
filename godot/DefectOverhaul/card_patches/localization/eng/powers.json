@@ -1,0 +1,26 @@
+{
+  "CONSUMING_SHADOW": {
+    "CONSUMING_SHADOW_POWER.description": "Whenever you [gold]Evoke[/gold] an [gold]Dark[/gold] Orb, trigger the passive ability of all other [gold]Dark[/gold] Orbs.",
+    "CONSUMING_SHADOW_POWER.smartDescription": "Whenever you [gold]Evoke[/gold] an [gold]Dark[/gold] Orb, trigger the passive ability of all other [gold]Dark[/gold] Orbs [blue]{Amount}[/blue] {Amount:plural:time|times}."
+  },
+  "COOLANT": {
+    "COOLANT_POWER.description": "Whenever you [gold]Channel[/gold] an Orb, gain [gold]Block[/gold].",
+    "COOLANT_POWER.smartDescription": "Whenever you [gold]Channel[/gold] an Orb, gain [blue]{Amount}[/blue] [gold]Block[/gold]."
+  },
+  "HAILSTORM": {
+    "HAILSTORM_POWER.description": "Whenever you gain [gold]Block[/gold] from a [gold]Frost[/gold] Orb, deal that much damage to a random enemy.",
+    "HAILSTORM_POWER.smartDescription": "Whenever you gain [gold]Block[/gold] from a [gold]Frost[/gold] Orb, deal that much damage to a random enemy [blue]{Amount}[/blue] {Amount:plural:time|times}."
+  },
+  "ITERATION": {
+    "ITERATION_POWER.description": "Whenever you draw a Status, draw more cards.",
+    "ITERATION_POWER.smartDescription": "Whenever you draw a Status, draw [blue]{Amount}[/blue] {Amount:plural:card|cards}."
+  },
+  "LOOP": {
+    "LOOP_POWER.description": "At the end of your turn, trigger the passive ability of all your Orbs 1 additional time.",
+    "LOOP_POWER.smartDescription": "At the end of your turn, trigger the passive ability of all your Orbs [blue]{Amount}[/blue] additional {Amount:plural:time|times}."
+  },
+  "SMOKESTACK": {
+    "SMOKESTACK_POWER.description": "Status gain [gold]Ethereal[/gold]. Whenever you [gold]Exhaust[/gold] a Status, gain [gold]Block[/gold].",
+    "SMOKESTACK_POWER.smartDescription": "Status gain [gold]Ethereal[/gold]. Whenever you [gold]Exhaust[/gold] a Status, gain [blue]{Amount}[/blue] [gold]Block[/gold]."
+  }
+}

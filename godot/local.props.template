@@ -1,0 +1,11 @@
+<Project>
+    <!--  Copy this file to local.props and fill in your paths.  -->
+    <PropertyGroup>
+        <!--  Path to the Slay the Spire 2 installation  -->
+        <Sts2Dir>Path\To\SteamLibrary\steamapps\common\Slay the Spire 2</Sts2Dir>
+        <!--  Path to the game's managed DLL directory (optional, defaults to $(Sts2Dir)\data_sts2_windows_x86_64)  -->
+        <Sts2DataDir>$(Sts2Dir)\data_sts2_windows_x86_64</Sts2DataDir>
+        <!--  Path to the Godot 4.5.1 Mono console executable  -->
+        <GodotExe>Path\To\Godot_v4.5.1-stable_mono_win64_console.exe</GodotExe>
+    </PropertyGroup>
+</Project>

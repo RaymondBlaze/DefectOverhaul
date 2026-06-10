@@ -1,0 +1,26 @@
+{
+  "CONSUMING_SHADOW": {
+    "CONSUMING_SHADOW_POWER.description": "每当你[gold]激发[/gold][gold]黑暗[/gold]充能球时，触发所有其他[gold]黑暗[/gold]充能球的被动。",
+    "CONSUMING_SHADOW_POWER.smartDescription": "每当你[gold]激发[/gold][gold]黑暗[/gold]充能球时，触发所有其他[gold]黑暗[/gold]充能球的被动[blue]{Amount}[/blue]次。"
+  },
+  "COOLANT": {
+    "COOLANT_POWER.description": "每当你[gold]生成[/gold]充能球时，获得[gold]格挡[/gold]。",
+    "COOLANT_POWER.smartDescription": "每当你[gold]生成[/gold]充能球时，获得[blue]{Amount}[/blue]点[gold]格挡[/gold]。"
+  },
+  "HAILSTORM": {
+    "HAILSTORM_POWER.description": "每当你从[gold]冰霜[/gold]充能球获得[gold]格挡[/gold]时，对随机敌人造成等量的伤害。",
+    "HAILSTORM_POWER.smartDescription": "每当你从[gold]冰霜[/gold]充能球获得[gold]格挡[/gold]时，对随机敌人造成等量的伤害[blue]{Amount}[/blue]次。"
+  },
+  "ITERATION": {
+    "ITERATION_POWER.description": "每当你抽到状态牌时，抽更多牌。",
+    "ITERATION_POWER.smartDescription": "每当你抽到状态牌时，抽[blue]{Amount}[/blue]张牌。"
+  },
+  "LOOP": {
+    "LOOP_POWER.description": "在你的回合结束时，额外触发你所有的充能球的被动。",
+    "LOOP_POWER.smartDescription": "在你的回合结束时，额外触发你所有的充能球的被动[blue]{Amount}[/blue]次。"
+  },
+  "SMOKESTACK": {
+    "SMOKESTACK_POWER.description": "状态牌获得[gold]虚无[/gold]。每当你[gold]消耗[/gold]一张状态牌，获得[gold]格挡[/gold]。",
+    "SMOKESTACK_POWER.smartDescription": "状态牌获得[gold]虚无[/gold]。每当你[gold]消耗[/gold]一张状态牌，获得[blue]{Amount}[/blue]点[gold]格挡[/gold]。"
+  }
+}

@@ -1,0 +1,40 @@
+# IDE / Editor
+.vs/
+.idea/
+!.idea/**/
+!**/.idea/icon.png
+*.user
+*.suo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temp / Log
+*.log
+*.tmp
+
+# Local Configs
+local.props
+*.uid
+.env
+
+# Build
+build/
+
+# Godot
+.godot/
+
+# Python Scripts
+__pycache__/
+.venv/
+scripts/tools/
+
+# External References
+/docs/STS2-RitsuLib/
+/docs/SlayTheSpire2ModdingTutorials/
+/libs/
+
+# Agents
+/.agentbridge/
+/.agentwork/

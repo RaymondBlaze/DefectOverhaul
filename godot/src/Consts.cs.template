@@ -1,0 +1,7 @@
+namespace DefectOverhaul;
+
+public static class Consts {
+    public const string Id = "DefectOverhaul";
+    public const string Version = "@ModVersion@";
+    public const string Sts2Version = "@Sts2Version@";
+}

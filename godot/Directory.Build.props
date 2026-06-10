@@ -1,0 +1,6 @@
+<Project>
+    <PropertyGroup>
+        <OutputPath>..\build\bin\$(Configuration)\</OutputPath>
+        <BaseIntermediateOutputPath>..\build\obj\$(Configuration)\</BaseIntermediateOutputPath>
+    </PropertyGroup>
+</Project>
