@@ -69,11 +69,11 @@ def generate_one(lang, names, card_ids):
         lines.append("")
 
         base_img = f"{image_prefix}/{cid}_base.png"
-        upg_img = f"{image_prefix}/{cid}_upgraded.png"
+        upgraded_img = f"{image_prefix}/{cid}_upgraded.png"
 
         lines.append("<table><tr>")
-        lines.append(f'  <td><img src="{base_img}" alt="base" width="100%"></td>')
-        lines.append(f'  <td><img src="{upg_img}" alt="upgraded+" width="100%"></td>')
+        lines.append(f'  <td><img src="../../{base_img}" alt="base" width="100%"></td>')
+        lines.append(f'  <td><img src="../../{upgraded_img}" alt="upgraded" width="100%"></td>')
         lines.append("</tr></table>")
         lines.append("")
 
