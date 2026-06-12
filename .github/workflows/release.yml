@@ -3,6 +3,9 @@ name: Release
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 env:
   DOTNET_VERSION: "9.0.x"
   GODOT_VERSION: "4.5.1"
@@ -48,7 +51,7 @@ jobs:
         env:
           GODOT_VERSION: ${{ env.GODOT_VERSION }}
 
-      - name: Build
+      - name: Build mod
         run: dotnet build godot/DefectOverhaul.csproj
           -p:Sts2DataDir=$(pwd)/${{ env.STS2_SIGNATURES_PATH }}/data
           -p:GodotExe=${{ env.GODOT_BIN }}
