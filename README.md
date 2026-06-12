@@ -8,7 +8,7 @@ Gameplay overhaul for the Defect character.
 
 ## Current Features
 
-- Modified 25 [Cards](docs/eng/CARDS.md), each card modification can be independently toggled with STS2-RitsuLib's in-game config.
+- Modified 24 [Cards](docs/eng/CARDS.md), each card modification can be independently toggled with STS2-RitsuLib's in-game config.
 - Supports English and Simplified Chinese localization.
 
 ## Dependencies

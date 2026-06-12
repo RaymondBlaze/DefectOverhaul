@@ -103,7 +103,7 @@ Supports STS2 beta v0.107.0.
 #### Refract
 
 - Cost: 3 -> 2
-- Effect -> Deal 5(8) damage twice. Channel 2 Glass.
+- Effect -> Deal 4(7) damage twice. Channel 2 Glass.
 
 #### Signal Boost
 
@@ -222,7 +222,7 @@ Supports STS2 beta v0.107.0.
 #### 折射
 
 - 费用：3 → 2
-- 效果：造成5(8)点伤害两次。生成2个玻璃充能球。
+- 效果：造成4(7)点伤害两次。生成2个玻璃充能球。
 
 #### 信号增强
 

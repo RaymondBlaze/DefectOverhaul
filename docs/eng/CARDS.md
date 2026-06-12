@@ -63,13 +63,6 @@
   <td><img src="images/cards/eng/GLACIER_upgraded.png" alt="upgraded+" width="100%"></td>
 </tr></table>
 
-## Glasswork
-
-<table><tr>
-  <td><img src="images/cards/eng/GLASSWORK_base.png" alt="base" width="100%"></td>
-  <td><img src="images/cards/eng/GLASSWORK_upgraded.png" alt="upgraded+" width="100%"></td>
-</tr></table>
-
 ## Hailstorm
 
 <table><tr>

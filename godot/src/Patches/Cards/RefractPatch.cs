@@ -12,7 +12,7 @@ namespace DefectOverhaul.Patches.Cards;
 ///         Cost: 3 -> 2
 ///     </para>
 ///     <para>
-///         Effect -> Deal 5(8) damage twice. Channel 2 Glass.
+///         Effect -> Deal 4(7) damage twice. Channel 2 Glass.
 ///     </para>
 /// </summary>
 [CardPatch(nameof(Refract))]
@@ -39,7 +39,7 @@ public static class RefractPatch {
         public static bool Prefix(ref IEnumerable<DynamicVar> __result) {
             __result = [
                 new RepeatVar(2),
-                new DamageVar(5, ValueProp.Move)
+                new DamageVar(4, ValueProp.Move)
             ];
             return false;
         }

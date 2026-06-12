@@ -63,13 +63,6 @@
   <td><img src="images/cards/zhs/GLACIER_upgraded.png" alt="upgraded+" width="100%"></td>
 </tr></table>
 
-## 玻璃工艺
-
-<table><tr>
-  <td><img src="images/cards/zhs/GLASSWORK_base.png" alt="base" width="100%"></td>
-  <td><img src="images/cards/zhs/GLASSWORK_upgraded.png" alt="upgraded+" width="100%"></td>
-</tr></table>
-
 ## 冰雹风暴
 
 <table><tr>
