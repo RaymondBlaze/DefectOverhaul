@@ -5,11 +5,20 @@
   "BARRAGE": {
     "BARRAGE.description": "当前每有一个[gold]充能球[/gold]，对所有敌人造成{Damage:diff()}点伤害。{InCombat:\n（命中{CalculatedHits:diff()}次）|}"
   },
+  "BIASED_COGNITION": {
+    "BIASED_COGNITION.description": "获得{FocusPower:diff()}点[gold]集中[/gold]。\n在你的回合结束时，如果你本回合没有获得过[gold]集中[/gold]，失去{BiasedCognitionPower:diff()}点[gold]集中[/gold]。"
+  },
   "CONSUMING_SHADOW": {
     "CONSUMING_SHADOW.description": "[gold]生成[/gold]{Repeat:diff()}个[gold]黑暗[/gold]充能球。\n每当你[gold]激发[/gold][gold]黑暗[/gold]充能球时，触发所有其他[gold]黑暗[/gold]充能球的被动。"
   },
   "COOLANT": {
     "COOLANT.description": "每当你[gold]生成[/gold]充能球时，获得{CoolantPower:diff()}点[gold]格挡[/gold]。"
+  },
+  "CREATIVE_AI": {
+    "CREATIVE_AI.description": "在你的回合开始时，从3张随机能力牌中选择1张添加到你的[gold]手牌[/gold]。"
+  },
+  "DARKNESS": {
+    "DARKNESS.description": "[gold]生成[/gold]1[gold]黑暗[/gold]充能球。\n触发{IfUpgraded:show:所有|你最右侧的}[gold]黑暗[/gold]充能球的被动。"
   },
   "FTL": {
     "FTL.description": "造成{Damage:diff()}点伤害。\n将你[gold]抽牌堆[/gold]中的一张随机0{energyPrefix:energyIcons(1)}牌放入你的[gold]手牌[/gold]。"
@@ -23,11 +32,11 @@
   "HOTFIX": {
     "HOTFIX.description": "在本回合获得{FocusPower:diff()}点[gold]集中[/gold]。\n本回合这张牌的耗能增加{Energy:energyIcons()}。"
   },
+  "HYPERBEAM": {
+    "HYPERBEAM.description": "对所有敌人造成{Damage:diff()}点伤害。\n失去{OrbSlots:diff()}个充能球栏位。"
+  },
   "ICE_LANCE": {
     "ICE_LANCE.description": "造成{CalculatedDamage:diff()}点伤害。\n你在本场战斗中每[gold]生成[/gold]过一个[gold]冰霜[/gold]充能球，这张牌就额外造成{ExtraDamage:diff()}点伤害。\n[gold]生成[/gold]{Repeat:diff()}个[gold]冰霜[/gold]充能球。"
-  },
-  "ITERATION": {
-    "ITERATION.description": "每当你抽到一张状态牌时，抽{IterationPower:diff()}张牌。"
   },
   "LEAP": {
     "LEAP.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n这张牌的耗能降为0{energyPrefix:energyIcons(1)}。"
@@ -44,7 +53,10 @@
   "SWEEPING_BEAM": {
     "SWEEPING_BEAM.description": "对所有敌人造成{Damage:diff()}点伤害。\n当前每有一名敌人，就抽一张牌。{InCombat:\n（抽{CalculatedCards:diff()}张牌）|}"
   },
+  "SYNTHESIS": {
+    "SYNTHESIS.description": "造成{Damage:diff()}点伤害。\n你[gold]手牌[/gold]中的一张随机牌在本回合内免费打出。"
+  },
   "UPROAR": {
-    "UPROAR.description": "造成{Damage:diff()}点伤害两次。\n从你的[gold]抽牌堆[/gold]中随机打出{Cards:diff()}张攻击牌。"
+    "UPROAR.description": "造成{Damage:diff()}点伤害两次。\n{IfUpgraded:show:对该敌人|}随机打出你的抽牌堆中的1张攻击牌。"
   }
 }

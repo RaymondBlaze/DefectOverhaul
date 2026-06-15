@@ -52,6 +52,7 @@ public static class ConsumingShadowPatch {
     [RegisterSingleton]
     public sealed class DefectOverhaulConsumingShadowCombatHooks() : HookedSingletonModel(HookType.Combat) {
         public override async Task AfterOrbEvoked(PlayerChoiceContext choiceContext, OrbModel orb, IEnumerable<Creature> targets) {
+            if (!CardPatches.IsCardPatched<ConsumingShadow>()) return;
             if (orb is not DarkOrb evokedDarkOrb) return;
             var player = orb.Owner;
             var darkOrbs = player.PlayerCombatState!.OrbQueue.Orbs.OfType<DarkOrb>();

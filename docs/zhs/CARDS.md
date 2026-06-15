@@ -14,6 +14,13 @@
   <td><img src="../../images/cards/zhs/BARRAGE_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
+## 偏差认知
+
+<table><tr>
+  <td><img src="../../images/cards/zhs/BIASED_COGNITION_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/zhs/BIASED_COGNITION_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
 ## 寒流
 
 <table><tr>
@@ -33,6 +40,20 @@
 <table><tr>
   <td><img src="../../images/cards/zhs/COOLANT_base.png" alt="base" width="100%"></td>
   <td><img src="../../images/cards/zhs/COOLANT_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## 创造性AI
+
+<table><tr>
+  <td><img src="../../images/cards/zhs/CREATIVE_AI_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/zhs/CREATIVE_AI_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## 漆黑
+
+<table><tr>
+  <td><img src="../../images/cards/zhs/DARKNESS_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/zhs/DARKNESS_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
 ## 碎片整理
@@ -84,18 +105,18 @@
   <td><img src="../../images/cards/zhs/HOTFIX_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
+## 超能光束
+
+<table><tr>
+  <td><img src="../../images/cards/zhs/HYPERBEAM_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/zhs/HYPERBEAM_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
 ## 冰之长枪
 
 <table><tr>
   <td><img src="../../images/cards/zhs/ICE_LANCE_base.png" alt="base" width="100%"></td>
   <td><img src="../../images/cards/zhs/ICE_LANCE_upgraded.png" alt="upgraded" width="100%"></td>
-</tr></table>
-
-## 迭代
-
-<table><tr>
-  <td><img src="../../images/cards/zhs/ITERATION_base.png" alt="base" width="100%"></td>
-  <td><img src="../../images/cards/zhs/ITERATION_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
 ## 飞跃
@@ -124,6 +145,20 @@
 <table><tr>
   <td><img src="../../images/cards/zhs/REFRACT_base.png" alt="base" width="100%"></td>
   <td><img src="../../images/cards/zhs/REFRACT_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## 暗影之盾
+
+<table><tr>
+  <td><img src="../../images/cards/zhs/SHADOW_SHIELD_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/zhs/SHADOW_SHIELD_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## 打碎
+
+<table><tr>
+  <td><img src="../../images/cards/zhs/SHATTER_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/zhs/SHATTER_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
 ## 信号增强
@@ -161,9 +196,23 @@
   <td><img src="../../images/cards/zhs/SWEEPING_BEAM_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
+## 人工合成
+
+<table><tr>
+  <td><img src="../../images/cards/zhs/SYNTHESIS_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/zhs/SYNTHESIS_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
 ## 骚动
 
 <table><tr>
   <td><img src="../../images/cards/zhs/UPROAR_base.png" alt="base" width="100%"></td>
   <td><img src="../../images/cards/zhs/UPROAR_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## 电流相生
+
+<table><tr>
+  <td><img src="../../images/cards/zhs/VOLTAIC_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/zhs/VOLTAIC_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>

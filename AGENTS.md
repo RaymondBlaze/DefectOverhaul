@@ -40,7 +40,7 @@ This is a Mod project for the game Slay the Spire 2, using Godot.NET.Sdk/4.5.1.
 The following rules MUST be followed:
 
 - Never modify project level skills: Unless the user EXPLICITLY requested for modifying project level skill files, DO NOT 
-write to the `.agent/skills` directory by any means.
+write to the `.agents/skills` directory by any means.
 - Always use IDE tools: When IDE tools provided by MCP are available, prioritize them over corresponding native tools and 
 cli tools. NEVER write files WITHOUT using IDE tools, this could break IDE index badly.
 - Plan before implementing: Unless the user EXPLICITLY requested for implementation NOW, DO NOT start implement anything, 
@@ -90,8 +90,10 @@ Configured by `scripts/configs/update_libs.json`:
 
 ### Project Libraries
 
-The project's `libs` directory contains decompiled sources and resources of the game and other used libraries, 
+The project's `libs` directory contains binary, decompiled sources and resources of the game and other used libraries, 
 these are always the most reliable source of information.
+
+If an ILSpy MCP is available, combine ILSpy MCP tool calls with decompiled sources reading to improve efficiency.
 
 ### STS2-RitsuLib
 

@@ -1,4 +1,5 @@
 using DefectOverhaul.Patches.Cards;
+using DefectOverhaul.Patches.Gameplay;
 using STS2RitsuLib;
 using STS2RitsuLib.Settings;
 using STS2RitsuLib.Utils;
@@ -7,7 +8,7 @@ namespace DefectOverhaul.Settings;
 
 public static class DefectOverhaulSettingsPage {
     private static readonly I18N i18N = new(
-        $"{Consts.Id}.Settings",
+        $"{Consts.ModId}.Settings",
         pckFolders: ["res://DefectOverhaul/settings/localization"]
     );
 
@@ -17,9 +18,10 @@ public static class DefectOverhaulSettingsPage {
 
     public static void Initialize() {
         RitsuLibFramework.RegisterModSettings(
-            Consts.Id, page => {
-                page.WithModDisplayName(Loc("defectoverhaul.mod.displayName", "Defect Overhaul"))
+            Consts.ModId, page => {
+                page.WithModDisplayName(Loc("defectoverhaul.mod.display_name", "Defect Overhaul"))
                     .WithTitle(Loc("defectoverhaul.page.title", "Settings"));
+                GameplayPatches.ConfigureSettingsPage(page, Loc);
                 CardPatches.ConfigureSettingsPage(page, Loc);
             }
         );

@@ -14,6 +14,13 @@
   <td><img src="../../images/cards/eng/BARRAGE_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
+## Biased Cognition
+
+<table><tr>
+  <td><img src="../../images/cards/eng/BIASED_COGNITION_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/eng/BIASED_COGNITION_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
 ## Cold Snap
 
 <table><tr>
@@ -33,6 +40,20 @@
 <table><tr>
   <td><img src="../../images/cards/eng/COOLANT_base.png" alt="base" width="100%"></td>
   <td><img src="../../images/cards/eng/COOLANT_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## Creative AI
+
+<table><tr>
+  <td><img src="../../images/cards/eng/CREATIVE_AI_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/eng/CREATIVE_AI_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## Darkness
+
+<table><tr>
+  <td><img src="../../images/cards/eng/DARKNESS_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/eng/DARKNESS_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
 ## Defragment
@@ -84,18 +105,18 @@
   <td><img src="../../images/cards/eng/HOTFIX_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
+## Hyperbeam
+
+<table><tr>
+  <td><img src="../../images/cards/eng/HYPERBEAM_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/eng/HYPERBEAM_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
 ## Ice Lance
 
 <table><tr>
   <td><img src="../../images/cards/eng/ICE_LANCE_base.png" alt="base" width="100%"></td>
   <td><img src="../../images/cards/eng/ICE_LANCE_upgraded.png" alt="upgraded" width="100%"></td>
-</tr></table>
-
-## Iteration
-
-<table><tr>
-  <td><img src="../../images/cards/eng/ITERATION_base.png" alt="base" width="100%"></td>
-  <td><img src="../../images/cards/eng/ITERATION_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
 ## Leap
@@ -124,6 +145,20 @@
 <table><tr>
   <td><img src="../../images/cards/eng/REFRACT_base.png" alt="base" width="100%"></td>
   <td><img src="../../images/cards/eng/REFRACT_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## Shadow Shield
+
+<table><tr>
+  <td><img src="../../images/cards/eng/SHADOW_SHIELD_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/eng/SHADOW_SHIELD_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## Shatter
+
+<table><tr>
+  <td><img src="../../images/cards/eng/SHATTER_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/eng/SHATTER_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
 ## Signal Boost
@@ -161,9 +196,23 @@
   <td><img src="../../images/cards/eng/SWEEPING_BEAM_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>
 
+## Synthesis
+
+<table><tr>
+  <td><img src="../../images/cards/eng/SYNTHESIS_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/eng/SYNTHESIS_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
 ## Uproar
 
 <table><tr>
   <td><img src="../../images/cards/eng/UPROAR_base.png" alt="base" width="100%"></td>
   <td><img src="../../images/cards/eng/UPROAR_upgraded.png" alt="upgraded" width="100%"></td>
+</tr></table>
+
+## Voltaic
+
+<table><tr>
+  <td><img src="../../images/cards/eng/VOLTAIC_base.png" alt="base" width="100%"></td>
+  <td><img src="../../images/cards/eng/VOLTAIC_upgraded.png" alt="upgraded" width="100%"></td>
 </tr></table>

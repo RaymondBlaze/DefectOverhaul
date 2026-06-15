@@ -1,7 +1,9 @@
-"""Decompile NuGet package DLLs (GodotSharp, STS2.RitsuLib) to libs/<name>/src.
+"""Update NuGet package DLLs (GodotSharp, STS2.RitsuLib): decompile to
+libs/<name>/src, then copy DLL (and PDB) to libs/<name>/bin/ for
+ILSpy MCP tool access.
 
 Usage:
-    python scripts/libs/decompile_nuget_packages.py
+    python scripts/libs/update_nuget_packages.py
 """
 
 import json
@@ -12,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from utils.cli import step, ok, fail
 from utils.paths import root_dir, libs_dir, scripts_configs_dir
-from libs._decompile import ilspy_decompile
+from libs.update_libs import ilspy_decompile, copy_dll_for_mcp
 
 
 def resolve_nuget_dlls(package_id: str) -> list[Path]:
@@ -73,6 +75,7 @@ def main() -> None:
         dlls = resolve_nuget_dlls(pkg)
         for dll in dlls:
             ilspy_decompile(dll, libs_dir() / dll.stem / "src")
+            copy_dll_for_mcp(dll, libs_dir() / dll.stem / "src")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,8 @@
-"""Decompile game DLLs (sts2, 0Harmony, etc.) to libs/<name>/src.
+"""Update game DLLs (sts2, 0Harmony, etc.): decompile to libs/<name>/src,
+then copy DLL (and PDB) to libs/<name>/bin/ for ILSpy MCP tool access.
 
 Usage:
-    python scripts/libs/decompile_game_libs.py
+    python scripts/libs/update_game_libs.py
 """
 
 import json
@@ -12,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from utils.cli import step, fail
 from utils.paths import sts2_data_dir, libs_dir, scripts_configs_dir
-from libs._decompile import ilspy_decompile
+from libs.update_libs import ilspy_decompile, copy_dll_for_mcp
 
 
 def main() -> None:
@@ -35,6 +36,7 @@ def main() -> None:
         if not dll.is_file():
             fail(f"Game DLL {name}.dll not found at {dll}")
         ilspy_decompile(dll, libs_dir() / name / "src")
+        copy_dll_for_mcp(dll, libs_dir() / name / "src")
 
 
 if __name__ == "__main__":

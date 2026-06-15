@@ -98,6 +98,7 @@ public static class RainbowPatch {
     [RegisterSingleton]
     public sealed class DefectOverhaulRainbowCombatHooks() : HookedSingletonModel(HookType.Combat) {
         public override async Task AfterOrbChanneled(PlayerChoiceContext choiceContext, Player player, OrbModel orb) {
+            if (!CardPatches.IsCardPatched<Rainbow>()) return;
             var cards = orb.Owner.PlayerCombatState!.AllPiles
                 .Where(pile => pile.Type != PileType.Play)
                 .SelectMany(pile => pile.Cards)

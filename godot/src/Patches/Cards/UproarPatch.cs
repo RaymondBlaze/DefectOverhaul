@@ -1,51 +1,19 @@
-using HarmonyLib;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Cards;
-using MegaCrit.Sts2.Core.ValueProps;
 using STS2RitsuLib.Patching.Models;
 
 namespace DefectOverhaul.Patches.Cards;
 
 /// <summary>
 ///     <para>
-///         Effect -> Deal 6 damage twice. Play 1(2) random Attacks from your Draw Pile.
+///         Effect -> Deal 6(8) damage twice. Play 1 random Attack from your Draw Pile (against the enemy).
 ///     </para>
 /// </summary>
 [CardPatch(nameof(Uproar))]
 public static class UproarPatch {
-    public sealed class UproarCanonicalVars : IPatchMethod {
-        public static string PatchId => "Uproar.CanonicalVars";
-
-        public static ModPatchTarget[] GetTargets() {
-            return [new ModPatchTarget(typeof(Uproar), "CanonicalVars", MethodType.Getter)];
-        }
-
-        public static bool Prefix(ref IEnumerable<DynamicVar> __result) {
-            __result = [
-                new DamageVar(6, ValueProp.Move),
-                new CardsVar(1)
-            ];
-            return false;
-        }
-    }
-
-    public sealed class UproarOnUpgrade : IPatchMethod {
-        public static string PatchId => "Uproar.OnUpgrade";
-
-        public static ModPatchTarget[] GetTargets() {
-            return [new ModPatchTarget(typeof(Uproar), "OnUpgrade")];
-        }
-
-        public static bool Prefix(Uproar __instance) {
-            __instance.DynamicVars.Cards.UpgradeValueBy(1);
-            return false;
-        }
-    }
-
     public sealed class UproarOnPlay : IPatchMethod {
         public static string PatchId => "Uproar.OnPlay";
 
@@ -81,7 +49,8 @@ public static class UproarPatch {
                     .ToList()
                     .StableShuffle(card.Owner.RunState.Rng.Shuffle)
                     .FirstOrDefault();
-                if (cardModel != null) await CardCmd.AutoPlay(choiceContext, cardModel, null);
+                if (cardModel != null)
+                    await CardCmd.AutoPlay(choiceContext, cardModel, card.IsUpgraded ? cardPlay.Target : null);
             }
         }
     }

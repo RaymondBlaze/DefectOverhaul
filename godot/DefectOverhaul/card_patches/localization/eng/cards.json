@@ -5,11 +5,20 @@
   "BARRAGE": {
     "BARRAGE.description": "Deal {Damage:diff()} damage to ALL enemies for each [gold]Channeled[/gold] Orb.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}"
   },
+  "BIASED_COGNITION": {
+    "BIASED_COGNITION.description": "Gain {FocusPower:diff()} [gold]Focus[/gold].\nAt the end of your turn, if you didn't gain [gold]Focus[/gold] this turn, lose {BiasedCognitionPower:diff()} [gold]Focus[/gold]."
+  },
   "CONSUMING_SHADOW": {
     "CONSUMING_SHADOW.description": "[gold]Channel[/gold] {Repeat:diff()} [gold]Dark[/gold].\nWhenever you [gold]Evoke[/gold] an [gold]Dark[/gold] Orb, trigger the passive ability of all other [gold]Dark[/gold] Orbs."
   },
   "COOLANT": {
     "COOLANT.description": "Whenever you [gold]Channel[/gold] an Orb, gain {CoolantPower:diff()} [gold]Block[/gold]."
+  },
+  "CREATIVE_AI": {
+    "CREATIVE_AI.description": "At the start of your turn, choose 1 of 3 random Power cards to add into your [gold]Hand[/gold]."
+  },
+  "DARKNESS": {
+    "DARKNESS.description": "[gold]Channel[/gold] 1 [gold]Dark[/gold].\nTrigger the passive ability of {IfUpgraded:show:all [gold]Dark[/gold] Orbs|your rightmost [gold]Dark[/gold] Orb}."
   },
   "FTL": {
     "FTL.description": "Deal {Damage:diff()} damage.\nPut a random 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold]."
@@ -23,11 +32,11 @@
   "HOTFIX": {
     "HOTFIX.description": "Gain {FocusPower:diff()} [gold]Focus[/gold] this turn.\nIncrease this card's cost by {Energy:energyIcons()} this turn."
   },
+  "HYPERBEAM": {
+    "HYPERBEAM.description": "Deal {Damage:diff()} damage to ALL enemies.\nLose {OrbSlots:diff()} Orb Slot."
+  },
   "ICE_LANCE": {
     "ICE_LANCE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each [gold]Frost[/gold] Orb [gold]Channeled[/gold] this combat.\n[gold]Channel[/gold] {Repeat:diff()} [gold]Frost[/gold]."
-  },
-  "ITERATION": {
-    "ITERATION.description": "Whenever you draw a Status, draw {IterationPower:diff()} {IterationPower:plural:card|cards}."
   },
   "LEAP": {
     "LEAP.description": "Gain {Block:diff()} [gold]Block[/gold].\nReduce this card's cost to 0 {energyPrefix:energyIcons(1)}."
@@ -44,7 +53,10 @@
   "SWEEPING_BEAM": {
     "SWEEPING_BEAM.description": "Deal {Damage:diff()} damage to ALL enemies.\nDraw 1 card for each enemy.{InCombat:\n(Draw {CalculatedCards:diff()} {CalculatedCards:plural:card|cards})|}"
   },
+  "SYNTHESIS": {
+    "SYNTHESIS.description": "Deal {Damage:diff()} damage.\nA random card in your [gold]Hand[/gold] is free to play this turn."
+  },
   "UPROAR": {
-    "UPROAR.description": "Deal {Damage:diff()} damage twice.\nPlay {Cards:diff()} random {Cards:plural:Attack|Attacks} from your [gold]Draw Pile[/gold]."
+    "UPROAR.description": "Deal {Damage:diff()} damage twice.\nPlay a random Attack from your [gold]Draw Pile[/gold]{IfUpgraded:show: against the enemy|}."
   }
 }

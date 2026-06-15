@@ -1,4 +1,3 @@
-using System.Reflection;
 using System.Reflection.Emit;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -8,19 +7,19 @@ using STS2RitsuLib.Utils.HarmonyIl;
 namespace DefectOverhaul.Patches.Transpilers;
 
 public static class CardModelConstructorTranspiler {
-    private static readonly ConstructorInfo constructor = AccessTools.Constructor(
-        typeof(CardModel),
-        [typeof(int), typeof(CardType), typeof(CardRarity), typeof(TargetType), typeof(bool)]
-    );
-
-    private static readonly HarmonyIlPattern pattern = HarmonyIlPattern.Sequence(
+    private static readonly HarmonyIlPattern target = HarmonyIlPattern.Sequence(
         HarmonyIl.IsLdarg(0),
         HarmonyIl.IsLdcI4(),
         HarmonyIl.IsLdcI4(),
         HarmonyIl.IsLdcI4(),
         HarmonyIl.IsLdcI4(),
         HarmonyIl.IsLdcI4(),
-        instr => instr.opcode == OpCodes.Call && ReferenceEquals(instr.operand, constructor)
+        HarmonyIl.Is(
+            OpCodes.Call, AccessTools.Constructor(
+                typeof(CardModel),
+                [typeof(int), typeof(CardType), typeof(CardRarity), typeof(TargetType), typeof(bool)]
+            )
+        )
     );
 
     public static IEnumerable<CodeInstruction> ModifyArgs(
@@ -33,33 +32,27 @@ public static class CardModelConstructorTranspiler {
     ) {
         var rewriter = HarmonyIlRewriter.From(instructions);
 
-        if (!rewriter.TryFind(pattern, out var match))
-            throw new InvalidOperationException("CardModel constructor call pattern not found in IL.");
+        if (!rewriter.TryFind(target, out var match))
+            throw new InvalidOperationException("Could not find target in IL.");
 
         var insns = rewriter.Instructions();
         var offset = match.Index;
 
-        // ldarg.0
-        offset++;
         // ldc.i4 (canonicalEnergyCost)
         if (canonicalEnergyCost.HasValue)
-            insns[offset] = HarmonyIl.LdcI4(canonicalEnergyCost.Value);
-        offset++;
+            insns[offset + 1] = HarmonyIl.LdcI4(canonicalEnergyCost.Value);
         // ldc.i4 (type)
         if (type.HasValue)
-            insns[offset] = HarmonyIl.LdcI4((int)type.Value);
-        offset++;
+            insns[offset + 2] = HarmonyIl.LdcI4((int)type.Value);
         // ldc.i4 (rarity)
         if (rarity.HasValue)
-            insns[offset] = HarmonyIl.LdcI4((int)rarity.Value);
+            insns[offset + 3] = HarmonyIl.LdcI4((int)rarity.Value);
         // ldc.i4 (targetType)
-        offset++;
         if (targetType.HasValue)
-            insns[offset] = HarmonyIl.LdcI4((int)targetType.Value);
+            insns[offset + 4] = HarmonyIl.LdcI4((int)targetType.Value);
         // ldc.i4 (shouldShowInCardLibrary)
-        offset++;
         if (shouldShowInCardLibrary.HasValue)
-            insns[offset] = HarmonyIl.LdcI4(shouldShowInCardLibrary.Value ? 1 : 0);
+            insns[offset + 5] = HarmonyIl.LdcI4(shouldShowInCardLibrary.Value ? 1 : 0);
 
         return insns;
     }

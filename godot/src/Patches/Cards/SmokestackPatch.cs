@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Powers;
@@ -20,8 +21,7 @@ namespace DefectOverhaul.Patches.Cards;
 ///         Rarity: Uncommon -> Rare
 ///     </para>
 ///     <para>
-///         Effect -> Status gain Ethereal. Whenever you Exhaust a Status,
-///         gain 5(7) Block.
+///         Effect -> Status gain Ethereal. Whenever you Exhaust a Status, gain 4(5) Block.
 ///     </para>
 /// </summary>
 [CardPatch(nameof(Smokestack))]
@@ -35,6 +35,21 @@ public static class SmokestackPatch {
 
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) {
             return CardModelConstructorTranspiler.ModifyArgs(instructions, rarity: CardRarity.Rare);
+        }
+    }
+
+    public sealed class SmokestackCanonicalVars : IPatchMethod {
+        public static string PatchId => "Smokestack.CanonicalVars";
+
+        public static ModPatchTarget[] GetTargets() {
+            return [new ModPatchTarget(typeof(Smokestack), "CanonicalVars", MethodType.Getter)];
+        }
+
+        public static bool Prefix(ref IEnumerable<DynamicVar> __result) {
+            __result = [
+                new PowerVar<SmokestackPower>(4)
+            ];
+            return false;
         }
     }
 
@@ -72,6 +87,19 @@ public static class SmokestackPatch {
         }
     }
 
+    public sealed class SmokestackOnUpgrade : IPatchMethod {
+        public static string PatchId => "Smokestack.OnUpgrade";
+
+        public static ModPatchTarget[] GetTargets() {
+            return [new ModPatchTarget(typeof(Smokestack), "OnUpgrade")];
+        }
+
+        public static bool Prefix(Smokestack __instance) {
+            __instance.DynamicVars[nameof(SmokestackPower)].UpgradeValueBy(1);
+            return false;
+        }
+    }
+
     public sealed class SmokestackPowerAfterCardGeneratedForCombat : IPatchMethod {
         public static string PatchId => "SmokestackPower.AfterCardGeneratedForCombat";
 
@@ -88,6 +116,7 @@ public static class SmokestackPatch {
     [RegisterSingleton]
     public sealed class DefectOverhaulSmokestackCombatHooks() : HookedSingletonModel(HookType.Combat) {
         public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource) {
+            if (!CardPatches.IsCardPatched<Smokestack>()) return;
             if (power is not SmokestackPower) return;
             var combatState = power.Owner.Player?.PlayerCombatState;
             if (combatState == null) return;
@@ -96,6 +125,7 @@ public static class SmokestackPatch {
         }
 
         public override async Task AfterCardEnteredCombat(CardModel card) {
+            if (!CardPatches.IsCardPatched<Smokestack>()) return;
             if (card.Type != CardType.Status) return;
             var player = card.Owner;
             var power = player.Creature.GetPower<SmokestackPower>();
@@ -104,6 +134,7 @@ public static class SmokestackPatch {
         }
 
         public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal) {
+            if (!CardPatches.IsCardPatched<Smokestack>()) return;
             if (card.Type != CardType.Status) return;
             var player = card.Owner;
             var power = player.Creature.GetPower<SmokestackPower>();

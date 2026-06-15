@@ -1,5 +1,6 @@
 using System.Reflection;
 using MegaCrit.Sts2.Core.Localization;
+using MegaCrit.Sts2.Core.Models;
 using STS2RitsuLib;
 using STS2RitsuLib.Patching.Models;
 using STS2RitsuLib.Settings;
@@ -14,19 +15,23 @@ public static class CardPatches {
     private const string locPath = "res://DefectOverhaul/card_patches/localization";
     private static readonly string[] patchedLocTables = ["cards", "powers"];
 
-    private static readonly List<(Type Type, string CardId)> cardPatchScanResults = [];
-    private static Dictionary<string, bool> cardPatchResults = new();
+    private static readonly List<(Type Type, CardPatchAttribute Patch)> scanResults = [];
+    private static Dictionary<string, bool> patchEnabled = new();
 
     static CardPatches() {
         foreach (var type in typeof(CardPatches).Assembly.GetTypes()) {
-            var cardPatch = type.GetCustomAttribute<CardPatchAttribute>();
-            if (cardPatch != null)
-                cardPatchScanResults.Add((type, cardPatch.CardId));
+            var patch = type.GetCustomAttribute<CardPatchAttribute>();
+            if (patch != null)
+                scanResults.Add((type, patch));
         }
     }
 
     public static bool IsCardPatched(string cardId) {
-        return cardPatchResults.GetValueOrDefault(cardId, false);
+        return patchEnabled.GetValueOrDefault(cardId, false);
+    }
+
+    public static bool IsCardPatched<TCard>() where TCard : CardModel {
+        return IsCardPatched(ModelDb.GetEntry(typeof(TCard)));
     }
 
     internal static void Initialize() {
@@ -41,24 +46,24 @@ public static class CardPatches {
 
     internal static void ConfigureSettingsPage(ModSettingsPageBuilder page, Func<string, string, ModSettingsText> loc) {
         page.AddSection(
-            "cardPatches", section => {
+            "card_patches", section => {
                 section
                     .WithTitle(
                         loc(
-                            "defectoverhaul.section.cardPatches.title",
+                            "defectoverhaul.section.card_patches.title",
                             "Card Patches"
                         )
                     )
                     .WithDescription(
                         loc(
-                            "defectoverhaul.section.cardPatches.description",
+                            "defectoverhaul.section.card_patches.description",
                             "Enable/Disable specific card patches. Changes apply on next game launch."
                         )
                     );
-                var cardIds = cardPatchScanResults.Select(e => e.CardId).Order();
+                var cardIds = scanResults.Select(e => e.Patch.Id).Order();
                 foreach (var cardId in cardIds) {
                     var binding = new ModSettingsValueBinding<Dictionary<string, bool>, bool>(
-                        Consts.Id, configKey, SaveScope.Global,
+                        Consts.ModId, configKey, SaveScope.Global,
                         config => config.GetValueOrDefault(cardId, true),
                         (config, value) => config[cardId] = value
                     );
@@ -78,32 +83,33 @@ public static class CardPatches {
             configKey,
             configFile,
             SaveScope.Global,
-            () => cardPatchScanResults.ToDictionary(e => e.CardId, _ => true),
+            () => scanResults.ToDictionary(e => e.Patch.Id, _ => true),
             true
         );
 
         DefectOverhaul.DataStore.Modify<Dictionary<string, bool>>(
             configKey, saved => {
-                var merged = cardPatchScanResults.ToDictionary(
-                    e => e.CardId,
-                    e => saved.GetValueOrDefault(e.CardId, true)
+                var merged = scanResults.ToDictionary(
+                    e => e.Patch.Id,
+                    e => saved.GetValueOrDefault(e.Patch.Id, true)
                 );
                 saved.Clear();
                 foreach (var kv in merged)
                     saved[kv.Key] = kv.Value;
-                cardPatchResults = new Dictionary<string, bool>(saved);
+                patchEnabled = new Dictionary<string, bool>(saved);
             }
         );
     }
 
     private static void PatchAll() {
-        foreach (var (type, cardId) in cardPatchScanResults) {
-            if (!cardPatchResults[cardId]) {
+        foreach (var (type, patch) in scanResults) {
+            var cardId = patch.Id;
+            if (!patchEnabled[cardId]) {
                 DefectOverhaul.Logger.Debug($"[{nameof(CardPatches)}] Patches for '{cardId}' disabled, skipping...");
                 continue;
             }
 
-            var patcher = RitsuLibFramework.CreatePatcher(Consts.Id, $"Cards.{cardId}");
+            var patcher = RitsuLibFramework.CreatePatcher(Consts.ModId, $"Cards.{cardId}");
 
             foreach (var nested in type.GetNestedTypes()) {
                 if (!typeof(IPatchMethod).IsAssignableFrom(nested) || nested.IsAbstract)
@@ -120,7 +126,7 @@ public static class CardPatches {
                 continue;
 
             DefectOverhaul.Logger.Error($"[{nameof(CardPatches)}] Failed to apply patches for Card: {cardId}!");
-            cardPatchResults[cardId] = false;
+            patchEnabled[cardId] = false;
         }
     }
 
@@ -139,18 +145,18 @@ public static class CardPatches {
                 continue;
             }
 
-            var patches = new Dictionary<string, string>();
+            var locPatches = new Dictionary<string, string>();
             foreach (var (cardId, entries) in patchesJson.Data) {
                 if (!IsCardPatched(cardId))
                     continue;
                 foreach (var entry in entries)
-                    patches[entry.Key] = entry.Value;
+                    locPatches[entry.Key] = entry.Value;
             }
 
-            if (patches.Count <= 0)
+            if (locPatches.Count <= 0)
                 continue;
-            LocManager.Instance.GetTable(table).MergeWith(patches);
-            DefectOverhaul.Logger.Info($"[{nameof(CardPatches)}] Patched LocTable '{lang}/{table}.json' with {patches.Count} entries.");
+            LocManager.Instance.GetTable(table).MergeWith(locPatches);
+            DefectOverhaul.Logger.Info($"[{nameof(CardPatches)}] Patched LocTable '{lang}/{table}.json' with {locPatches.Count} entries.");
         }
     }
 }

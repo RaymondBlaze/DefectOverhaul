@@ -10,6 +10,197 @@
 <summary>简体中文</summary>
 </details>
 
+## 0.100.0
+
+<details>
+<summary>English</summary>
+
+Supports STS2 beta v0.107.0.
+
+### Fixes
+
+- Fixed subscribed combat hooks listeners ignoring Card Patches config, result in patches for certain cards can not be properly disabled.
+Affected cards: 
+  - Consuming Shadows
+  - Coolant
+  - Loop
+  - Rainbow
+  - Smokestack
+
+### Gameplay Changes
+
+#### Defect Regain Orb Slot
+
+- Default: enabled
+- Effect: When enabled, Defect regains an Orb Slot upon Channelling a new Orb with no Orb Slots, aligning with other characters.
+
+### Card Changes
+
+#### Biased Cognition
+
+- Original Effect (vanilla): Gain 4(5) Focus. At the start of your turn, lose 1 Focus.
+- New Effect: Gain 4(5) Focus. At the end of your turn, if you didn't gain Focus this turn, lose 1 Focus.
+
+#### Coolant
+
+- Original Effect: Whenever you Channel an Orb, gain 3(4) Block.
+- New Effect: Whenever you Channel an Orb, gain 2(3) Block.
+
+#### Creative AI
+
+- Original Effect (vanilla): At the start of your turn, add a random Power into your Hand.
+- New Effect: At the start of your turn, choose 1 of 3 random Power cards to add into your Hand.
+
+#### Darkness
+
+- Original Effect (vanilla): Channel 1 Dark. Trigger the passive ability of all Dark Orbs (twice).
+- New Effect: Channel 1 Dark. Trigger the passive of (your rightmost -> all) Dark Orb(s).
+
+#### Hyperbeam
+
+- Original Effect (vanilla): Deal 28(36) damage to ALL enemies. Lose 3 Focus.
+- New Effect: Deal 28(36) damage to ALL enemies. Lose 1 Orb Slot.
+
+#### Ice Lance
+
+- Original Effect: Deal 15(18) damage. Deals 5(6) additional damage for each Frost Orb Channeled this combat. Channel 3 Frost.
+- New Effect: Deal 15(20) damage. Deals 3(4) additional damage for each Frost Orb Channeled this combat. Channel 3 Frost.
+
+#### Iteration
+
+- Original Effect: Whenever you draw a Status, draw 1(2) cards.
+- New Effect (reverted to vanilla) -> The first time you draw a Status each turn, draw 2(3) cards.
+
+#### Shadow Shield
+
+- Original Effect (vanilla): Gain 11(15) Block. Channel 1 Dark.
+- New Effect: Gain 12(16) Block. Channel 1 Dark.
+
+#### Shatter
+
+- Original Cost (vanilla): 1(1)
+- New Cost: 2(2)
+- Original Effect (vanilla): Deal 7(11) damage to ALL enemies. Evoke all of your Orbs twice.
+- New Effect: Deal 14(20) damage to ALL enemies. Evoke all of your Orbs twice.
+
+#### Smokestack
+
+- Original Effect: Status gain Ethereal. Whenever you Exhaust a Status, gain 5(7) Block.
+- New Effect: Status gain Ethereal. Whenever you Exhaust a Status, gain 4(5) Block.
+
+#### Synthesis 
+
+- Original Effect (vanilla): Deal 14(20) damage. The next Power you play costs 0 energy.
+- New Effect: Deal 14(20) damage. A random card in your Hand is free to play this turn.
+
+#### Uproar
+
+- Original Effect: Deal 6 damage twice. Play 1(2) random Attacks from your Draw Pile.
+- New Effect: Deal 6(8) damage twice. Play 1 random Attack from your Draw Pile (against the enemy).
+
+#### Voltaic
+
+- Original Cost (vanilla): 3
+- New Cost: 3(2)
+- Original Effect: Channel Lightning equal to the Lightning already Channeled this combat. (-Exhaust.)
+- New Effect: Channel Lightning equal to the Lightning already Channeled this combat.
+</details>
+
+<details>
+<summary>简体中文</summary>
+
+支持杀戮尖塔2 beta v0.107.0 版本。
+
+### 修复
+
+- 修复了订阅的战斗事件监听器忽略卡牌修改配置，导致某些卡牌修改无法正确禁用的问题。
+  受影响的卡牌：
+  - 吞噬暗影
+  - 冷却剂
+  - 循环
+  - 彩虹
+  - 烟囱
+
+### 游戏机制改动
+
+#### 故障机器人恢复充能球栏位
+
+- 默认：启用
+- 效果：启用时，故障机器人在没有充能球栏位时生成充能球会自动获得1个充能球栏位，与其他角色一致。
+
+### 卡牌改动
+
+#### 偏差认知
+
+- 原效果（原版）：获得4(5)点集中。在你的回合开始时，失去1点集中。
+- 新效果：获得4(5)点集中。在你的回合结束时，如果你本回合没有获得过集中，失去1点集中。
+
+#### 冷却剂
+
+- 原效果：每当你生成充能球时，获得3(4)点格挡。
+- 新效果：每当你生成充能球时，获得2(3)点格挡。
+
+#### 创造性AI
+
+- 原效果（原版）：在你的回合开始时，将一张随机能力牌加入你的手牌。
+- 新效果：在你的回合开始时，从3张随机能力牌中选择1张添加到你的手牌。
+
+#### 漆黑
+
+- 原效果（原版）：生成1黑暗充能球。触发所有黑暗充能球的被动（两次）。
+- 新效果：生成1黑暗充能球。触发（你最右侧的 → 所有）黑暗充能球的被动。
+
+#### 超能光束
+
+- 原效果（原版）：对所有敌人造成28(36)点伤害。失去3点集中。
+- 新效果：对所有敌人造成28(36)点伤害。失去1个充能球栏位。
+
+#### 冰之长枪
+
+- 原效果：造成15(18)点伤害。你在本场战斗中每生成过一个冰霜充能球，这张牌就额外造成5(6)点伤害。生成3个冰霜充能球。
+- 新效果：造成15(20)点伤害。你在本场战斗中每生成过一个冰霜充能球，这张牌就额外造成3(4)点伤害。生成3个冰霜充能球。
+
+#### 迭代
+
+- 原效果：每当你抽到一张状态牌时，抽1(2)张牌。
+- 新效果（回调原版）：每回合你第一次抽到状态牌时，抽2(3)张牌。
+
+#### 暗影之盾
+
+- 原效果（原版）：获得11(15)点格挡。生成1个黑暗充能球。
+- 新效果：获得12(16)点格挡。生成1个黑暗充能球。
+
+#### 打碎
+
+- 原始费用（原版）：1
+- 新费用：2
+- 原效果（原版）：对所有敌人造成7(11)点伤害。激发你的所有充能球两次。
+- 新效果：对所有敌人造成14(20)点伤害。激发你的所有充能球两次。
+
+#### 烟囱
+
+- 原效果：状态牌获得虚无。每当你消耗一张状态牌，获得5(7)点格挡。
+- 新效果：状态牌获得虚无。每当你消耗一张状态牌，获得4(5)点格挡。
+
+#### 人工合成
+
+- 原效果（原版）：造成14(20)点伤害。你打出的下一张能力牌耗能变为0费。
+- 新效果：造成14(20)点伤害。你手牌中的一张随机牌在本回合内免费打出。
+
+#### 骚动
+
+- 原效果：造成6点伤害两次。从你的抽牌堆中随机打出1(2)张攻击牌。
+- 新效果：造成6(8)点伤害两次。(对该敌人)从你的抽牌堆中随机打出1张攻击牌。
+
+#### 电流相生
+
+- 原始费用（原版）：3
+- 新费用：3(2)
+- 原效果：生成等量于你在这场战斗中生成过的闪电充能球数量的闪电充能球。（-消耗。）
+- 新效果：生成等量于你在这场战斗中生成过的闪电充能球数量的闪电充能球。
+
+</details>
+
 ## 0.99.0
 
 <details>
@@ -22,24 +213,24 @@ Supports STS2 beta v0.107.0.
 
 #### Adaptive Strike
 
-- Effect -> Deal 18(23) damage. Transform a card in your Discard Pile into a 0[Energy] copy of this card.
+- Effect: Deal 18(23) damage. Transform a card in your Discard Pile into a 0[Energy] copy of this card.
 
 #### Barrage
 
-- Effect -> Deal 4(6) damage to ALL enemies for each Channeled Orb.
+- Effect: Deal 4(6) damage to ALL enemies for each Channeled Orb.
 
 #### Cold Snap
 
-- Effect -> Deal 8(11) damage. Channel 1 Frost.
+- Effect: Deal 8(11) damage. Channel 1 Frost.
 
 #### Consuming Shadow
 
-- Effect -> Channel 2(3) Dark. Whenever you Evoke a Dark Orb, trigger the passive ability of all other Dark Orbs.
+- Effect: Channel 2(3) Dark. Whenever you Evoke a Dark Orb, trigger the passive ability of all other Dark Orbs.
 
 #### Coolant
 
 - Rarity: Rare -> Uncommon
-- Effect -> Whenever you Channel an Orb, gain 3(4) Block.
+- Effect: Whenever you Channel an Orb, gain 3(4) Block.
 
 #### Defragment
 
@@ -48,71 +239,71 @@ Supports STS2 beta v0.107.0.
 #### Feral
 
 - Cost: 2(1) -> 1
-- Effect -> (Innate.) The first time you play a 0[Energy] Attack each turn, return it to your Hand.
+- Effect: (Innate.) The first time you play a 0[Energy] Attack each turn, return it to your Hand.
 
 #### FTL
 
-- Effect -> Deal 5(8) damage. Put a random 0[Energy] card from your Draw Pile into your Hand.
+- Effect: Deal 5(8) damage. Put a random 0[Energy] card from your Draw Pile into your Hand.
 
 #### Glacier
 
-- Effect -> Gain 7(10) Block. Channel 2 Frost.
+- Effect: Gain 7(10) Block. Channel 2 Frost.
 
 #### Glasswork
 
-- Effect -> Gain 6(9) Block. Channel 1 Glass.
+- Effect: Gain 6(9) Block. Channel 1 Glass.
 
 #### Hailstorm
 
 - Cost: 1 -> 2
 - Rarity: Uncommon -> Rare
-- Effect -> Channel 2(3) Frost. Whenever you gain Block from a Frost Orb, deal that much damage to a random enemy.
+- Effect: Channel 2(3) Frost. Whenever you gain Block from a Frost Orb, deal that much damage to a random enemy.
 
 #### Helix Drill
 
-- Effect -> Deal 3(5) damage for each 0[Energy] card played this combat.
+- Effect: Deal 3(5) damage for each 0[Energy] card played this combat.
 
 #### Hotfix
 
-- Effect -> Gain 2(3) Focus this turn. Increase this card's cost by 1[Energy] this turn.
+- Effect: Gain 2(3) Focus this turn. Increase this card's cost by 1[Energy] this turn.
 
 #### Ice Lance
 
-- Effect -> Deal 15(18) damage. Deals 5(6) additional damage for each Frost Orb Channeled this combat. Channel 3 Frost.
+- Effect: Deal 15(18) damage. Deals 5(6) additional damage for each Frost Orb Channeled this combat. Channel 3 Frost.
 
 #### Iteration
 
-- Effect -> Whenever you draw a Status, draw 1(2) cards.
+- Effect: Whenever you draw a Status, draw 1(2) cards.
 
 #### Leap
 
-- Effect -> Gain 8(11) Block. Reduce this card's cost to 0[Energy].
+- Effect: Gain 8(11) Block. Reduce this card's cost to 0[Energy].
 
 #### Loop
 
 - Cost: 1 -> 2(1)
 - Rarity: Uncommon -> Rare
-- Effect -> At the end of your turn, trigger the passive ability of all your Orbs 1 additional time.
+- Effect: At the end of your turn, trigger the passive ability of all your Orbs 1 additional time.
 
 #### Rainbow
 
 - Cost: 2 -> 3
-- Effect -> Channel 1 Lightning. Channel 1 Frost. Channel 1 Dark. Whenever you Channel an Orb, this card costs 1[Energy]
+- Effect: Channel 1 Lightning. Channel 1 Frost. Channel 1 Dark. Whenever you Channel an Orb, this card costs 1[Energy]
   less until played. (Retain.)
 
 #### Refract
 
 - Cost: 3 -> 2
-- Effect -> Deal 4(7) damage twice. Channel 2 Glass.
+- Effect: Deal 4(7) damage twice. Channel 2 Glass.
 
 #### Signal Boost
 
-- Effect -> Innate. The next Power you play is played an additional time. (Exhaust.)
+- Effect: Innate. The next Power you play is played an additional time. (Exhaust.)
 
 #### Smokestack
 
 - Rarity: Uncommon -> Rare
-- Effect -> Status gain Ethereal. Whenever you Exhaust a Status, gain 5(7) Block.
+- Effect: Status gain Ethereal. Whenever you Exhaust a Status, gain 5(7) Block.
 
 #### Spinner
 
@@ -120,15 +311,15 @@ Supports STS2 beta v0.107.0.
 
 #### Storm
 
-- Effect -> (Innate.) Whenever you play a Power, Channel 2 Lightning.
+- Effect: (Innate.) Whenever you play a Power, Channel 2 Lightning.
 
 #### Sweeping Beam
 
-- Effect -> Deal 6(9) damage to ALL enemies. Draw 1 card for each enemy.
+- Effect: Deal 6(9) damage to ALL enemies. Draw 1 card for each enemy.
 
 #### Uproar
 
-- Effect -> Deal 6 damage twice. Play 1(2) random Attacks from your Draw Pile.
+- Effect: Deal 6 damage twice. Play 1(2) random Attacks from your Draw Pile.
 
 </details>
 

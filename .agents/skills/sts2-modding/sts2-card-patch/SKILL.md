@@ -37,8 +37,20 @@ When the user requested patch for a Card, breakdown the need with this path:
 - Keyword changes: Does the need add/remove the Card's keyword?
 - Upgrade effect changes: Does the need affects the Card's upgrade effect?
 - Description and hover tip changes: Does the need requires changing the raw description text? If so, does it require
-  adding/
-  removing new HoverTip? Use the `sts2-modding/sts2-writing-descriptions` skill for this.
+  adding/removing new HoverTip? Use the `sts2-modding/sts2-writing-descriptions` skill for this.
+
+## Think Like a Modder
+
+- You're working a game modding project, not general software development, DO NOT assert conventions or pretend you know 
+related domain specific knowledge.
+- Think like a modder, a modder is also a player, they play the game and know the effect of specific game objects, it's 
+natural for them to look for existing vanilla implementation if they want something similar.
+- The same applies to you, although you as an agent don't actually play the game, you can still get some knowledge from 
+localization files, for the current usecase, they contain descriptions for cards, powers, relics, potions etc.
+- You don't have to find the exact same effect, nor do you need to find reference from cards only (even if cards is what 
+you are working on), any reference could be useful, even if it's only about a specific term or specific condition.
+- You don't need to dig too much into the game's infrastructure just for validation, you always reserve the right to ask 
+the user for clarification over a game concept that you don't fully understand.
 
 ## Patch Class
 

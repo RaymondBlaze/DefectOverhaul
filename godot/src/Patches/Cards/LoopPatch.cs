@@ -64,6 +64,7 @@ public static class LoopPatch {
     [RegisterSingleton]
     public sealed class DefectOverhaulLoopCombatHooks() : HookedSingletonModel(HookType.Combat) {
         public override int ModifyOrbPassiveTriggerCounts(OrbModel orb, int triggerCount) {
+            if (!CardPatches.IsCardPatched<Loop>()) return triggerCount;
             var power = orb.Owner.Creature.GetPower<LoopPower>();
             if (power != null) triggerCount += power.Amount;
             return triggerCount;

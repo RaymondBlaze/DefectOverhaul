@@ -5,7 +5,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Powers;
@@ -35,19 +34,6 @@ public class CoolantPatch {
 
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) {
             return CardModelConstructorTranspiler.ModifyArgs(instructions, rarity: CardRarity.Uncommon);
-        }
-    }
-
-    public sealed class CoolantCanonicalVars : IPatchMethod {
-        public static string PatchId => "Coolant.CanonicalVars";
-
-        public static ModPatchTarget[] GetTargets() {
-            return [new ModPatchTarget(typeof(Coolant), "CanonicalVars", MethodType.Getter)];
-        }
-
-        public static bool Prefix(ref IEnumerable<DynamicVar> __result) {
-            __result = [new PowerVar<CoolantPower>(3)];
-            return false;
         }
     }
 
@@ -99,6 +85,7 @@ public class CoolantPatch {
     [RegisterSingleton]
     public sealed class DefectOverhaulCoolantCombatHooks() : HookedSingletonModel(HookType.Combat) {
         public override async Task AfterOrbChanneled(PlayerChoiceContext choiceContext, Player player, OrbModel orb) {
+            if (!CardPatches.IsCardPatched<Coolant>()) return;
             var power = orb.Owner.Creature.GetPower<CoolantPower>();
             if (power == null) return;
             power.Flash();

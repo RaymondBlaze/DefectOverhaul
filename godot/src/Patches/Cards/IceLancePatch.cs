@@ -14,8 +14,8 @@ namespace DefectOverhaul.Patches.Cards;
 
 /// <summary>
 ///     <para>
-///         Effect -> Deal 15(18) damage. Deals 5(6) additional damage for each Frost Orb Channeled this combat. Channel 3
-///         Frost.
+///         Effect -> Deal 15(20) damage. Deals 3(4) additional damage for each Frost Orb Channeled this combat.
+///         Channel 3 Frost.
 ///     </para>
 /// </summary>
 [CardPatch(nameof(IceLance))]
@@ -30,7 +30,7 @@ public static class IceLancePatch {
         public static bool Prefix(ref IEnumerable<DynamicVar> __result) {
             __result = [
                 new CalculationBaseVar(15),
-                new ExtraDamageVar(5),
+                new ExtraDamageVar(3),
                 new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, _) =>
                     CombatManager.Instance.History.Entries
                         .OfType<OrbChanneledEntry>()
@@ -50,7 +50,7 @@ public static class IceLancePatch {
         }
 
         public static bool Prefix(IceLance __instance) {
-            __instance.DynamicVars.CalculationBase.UpgradeValueBy(3);
+            __instance.DynamicVars.CalculationBase.UpgradeValueBy(5);
             __instance.DynamicVars.ExtraDamage.UpgradeValueBy(1);
             return false;
         }

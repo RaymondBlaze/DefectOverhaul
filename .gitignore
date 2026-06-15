@@ -38,3 +38,4 @@ scripts/tools/
 # Agents
 /.agentbridge/
 /.agentwork/
+/.hermes

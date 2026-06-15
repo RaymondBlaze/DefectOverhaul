@@ -1,6 +1,10 @@
 {
-  "defectoverhaul.mod.displayName": "故障机器人重置",
+  "defectoverhaul.mod.display_name": "故障机器人重置",
   "defectoverhaul.page.title": "设置",
-  "defectoverhaul.section.cardPatches.title": "卡牌修改",
-  "defectoverhaul.section.cardPatches.description": "启用/禁用特定卡牌的修改，在下次启动游戏时生效。"
+  "defectoverhaul.section.gameplay_patches.title": "游戏机制修改",
+  "defectoverhaul.section.gameplay_patches.description": "启用/禁用特定游戏机制的修改，在下次启动游戏时生效。",
+  "defectoverhaul.gameplay_patches.defect_regain_orb_slot.title": "故障机器人恢复充能球栏位",
+  "defectoverhaul.gameplay_patches.defect_regain_orb_slot.description": "启用时，故障机器人在没有充能球栏位时生成充能球会自动获得1个充能球栏位，与其他角色一致。",
+  "defectoverhaul.section.card_patches.title": "卡牌修改",
+  "defectoverhaul.section.card_patches.description": "启用/禁用特定卡牌的修改，在下次启动游戏时生效。"
 }

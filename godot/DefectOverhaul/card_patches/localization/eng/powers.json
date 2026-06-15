@@ -1,4 +1,8 @@
 {
+  "BIASED_COGNITION": {
+    "BIASED_COGNITION_POWER.description": "At the end of your turn, if you didn't gain [gold]Focus[/gold] this turn, lose [blue]1[/blue] [gold]Focus[/gold].",
+    "BIASED_COGNITION_POWER.smartDescription": "At the end of your turn, if you didn't gain [gold]Focus[/gold] this turn, lose [blue]{Amount}[/blue] [gold]Focus[/gold]."
+  },
   "CONSUMING_SHADOW": {
     "CONSUMING_SHADOW_POWER.description": "Whenever you [gold]Evoke[/gold] an [gold]Dark[/gold] Orb, trigger the passive ability of all other [gold]Dark[/gold] Orbs.",
     "CONSUMING_SHADOW_POWER.smartDescription": "Whenever you [gold]Evoke[/gold] an [gold]Dark[/gold] Orb, trigger the passive ability of all other [gold]Dark[/gold] Orbs [blue]{Amount}[/blue] {Amount:plural:time|times}."
@@ -7,13 +11,13 @@
     "COOLANT_POWER.description": "Whenever you [gold]Channel[/gold] an Orb, gain [gold]Block[/gold].",
     "COOLANT_POWER.smartDescription": "Whenever you [gold]Channel[/gold] an Orb, gain [blue]{Amount}[/blue] [gold]Block[/gold]."
   },
+  "CREATIVE_AI": {
+    "CREATIVE_AI_POWER.description": "At the start of your turn, choose 1 of 3 random Power cards to add into your [gold]Hand[/gold].",
+    "CREATIVE_AI_POWER.smartDescription": "At the start of your turn, choose 1 of 3 random Power cards to add into your [gold]Hand[/gold], repeat [blue]{Amount}[/blue] {Amount:plural:time|times}."
+  },
   "HAILSTORM": {
     "HAILSTORM_POWER.description": "Whenever you gain [gold]Block[/gold] from a [gold]Frost[/gold] Orb, deal that much damage to a random enemy.",
     "HAILSTORM_POWER.smartDescription": "Whenever you gain [gold]Block[/gold] from a [gold]Frost[/gold] Orb, deal that much damage to a random enemy [blue]{Amount}[/blue] {Amount:plural:time|times}."
-  },
-  "ITERATION": {
-    "ITERATION_POWER.description": "Whenever you draw a Status, draw more cards.",
-    "ITERATION_POWER.smartDescription": "Whenever you draw a Status, draw [blue]{Amount}[/blue] {Amount:plural:card|cards}."
   },
   "LOOP": {
     "LOOP_POWER.description": "At the end of your turn, trigger the passive ability of all your Orbs 1 additional time.",

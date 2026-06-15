@@ -1,6 +1,10 @@
 {
-  "defectoverhaul.mod.displayName": "Defect Overhaul",
+  "defectoverhaul.mod.display_name": "Defect Overhaul",
   "defectoverhaul.page.title": "Settings",
-  "defectoverhaul.section.cardPatches.title": "Card Patches",
-  "defectoverhaul.section.cardPatches.description": "Enable/Disable specific card patches, applies on next game launch."
+  "defectoverhaul.section.gameplay_patches.title": "Gameplay Patches",
+  "defectoverhaul.section.gameplay_patches.description": "Enable/Disable specific gameplay patches, applies on next game launch.",
+  "defectoverhaul.gameplay_patches.defect_regain_orb_slot.title": "Defect Regain Orb Slot",
+  "defectoverhaul.gameplay_patches.defect_regain_orb_slot.description": "When enabled, Defect regains an Orb Slot upon Channelling a new Orb with no Orb Slots, aligning with other characters.",
+  "defectoverhaul.section.card_patches.title": "Card Patches",
+  "defectoverhaul.section.card_patches.description": "Enable/Disable specific card patches, applies on next game launch."
 }
