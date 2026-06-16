@@ -10,6 +10,28 @@
 <summary>简体中文</summary>
 </details>
 
+## 0.100.1
+
+<details>
+<summary>English</summary>
+
+Supports STS2 beta v0.107.0.
+
+### Fixes
+- Fixed the card Uproar being not playable due to referencing a removed `DynamicVar` named `Cards` in the `OnPlay` method.
+
+</details>
+
+<details>
+<summary>简体中文</summary>
+
+支持杀戮尖塔2 beta v0.107.0 版本。
+
+### 修复
+- 修复了骚动因为在`OnPlay`方法内引用了已移除的`Cards`变量而无法打出的问题。
+
+</details>
+
 ## 0.100.0
 
 <details>

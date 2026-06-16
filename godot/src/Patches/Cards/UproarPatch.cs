@@ -37,21 +37,19 @@ public static class UproarPatch {
                 .Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
-            for (var i = 0; i < card.DynamicVars.Cards.IntValue; i++) {
-                var cardModel = PileType.Draw
-                    .GetPile(card.Owner).Cards
-                    .Where(c => c.Type == CardType.Attack && !c.Keywords.Contains(CardKeyword.Unplayable))
-                    .ToList()
-                    .StableShuffle(card.Owner.RunState.Rng.Shuffle)
-                    .FirstOrDefault();
-                cardModel ??= PileType.Draw.GetPile(card.Owner).Cards
-                    .Where(c => c.Type == CardType.Attack)
-                    .ToList()
-                    .StableShuffle(card.Owner.RunState.Rng.Shuffle)
-                    .FirstOrDefault();
-                if (cardModel != null)
-                    await CardCmd.AutoPlay(choiceContext, cardModel, card.IsUpgraded ? cardPlay.Target : null);
-            }
+            var cardModel = PileType.Draw
+                .GetPile(card.Owner).Cards
+                .Where(c => c.Type == CardType.Attack && !c.Keywords.Contains(CardKeyword.Unplayable))
+                .ToList()
+                .StableShuffle(card.Owner.RunState.Rng.Shuffle)
+                .FirstOrDefault();
+            cardModel ??= PileType.Draw.GetPile(card.Owner).Cards
+                .Where(c => c.Type == CardType.Attack)
+                .ToList()
+                .StableShuffle(card.Owner.RunState.Rng.Shuffle)
+                .FirstOrDefault();
+            if (cardModel != null)
+                await CardCmd.AutoPlay(choiceContext, cardModel, card.IsUpgraded ? cardPlay.Target : null);
         }
     }
 }
