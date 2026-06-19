@@ -1,11 +1,3 @@
-"""Extract a Godot .pck file to a directory.
-
-Standalone usage:
-    python scripts/utils/extract_pck.py <pck_path> <output_dir>
-
-Called from other scripts via ``extract_pck(pck_path, output_dir)``.
-"""
-
 import shutil
 import subprocess
 import sys

@@ -8,7 +8,10 @@ Gameplay overhaul for the Defect character.
 
 ## Current Features
 
-- Modified 24 [Cards](docs/eng/CARDS.md), each card modification can be independently toggled with STS2-RitsuLib's in-game config.
+- Modified 31 [Cards](docs/eng/CARDS.md).
+- Modified some game mechanics:
+  - Defect Regain Orb Slot: When enabled, Defect regains an Orb Slot upon Channelling a new Orb with no Orb Slots, aligning with other characters.
+- Every modification can be dependently toggled with RitsuLib's in-game config.
 - Supports English and Simplified Chinese localization.
 
 ## Dependencies

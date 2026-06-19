@@ -1,12 +1,3 @@
-"""
-update_docs.py
-
-Run all doc update scripts in sequence.
-
-Usage:
-    python scripts/docs/update_docs.py
-"""
-
 import sys
 from pathlib import Path
 

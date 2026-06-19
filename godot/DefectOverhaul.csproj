@@ -7,10 +7,10 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <ModVersion>0.100.1</ModVersion>
+        <ModVersion>0.100.2</ModVersion>
         <Sts2Version>0.107.0</Sts2Version>
         <Sts2DataDir Condition="'$(Sts2DataDir)' == '' and '$(Sts2Dir)' != ''">$(Sts2Dir)\data_sts2_windows_x86_64</Sts2DataDir>
-        <ModOutputDir Condition="'$(ModOutputDir)' == ''">$(MSBuildProjectDirectory)\..\build\out\$(MSBuildProjectName)</ModOutputDir>
+        <ModOutputDir Condition="'$(ModOutputDir)' == ''">$(MSBuildProjectDirectory)\..\build\release\content</ModOutputDir>
         <ModDeployDir Condition="'$(Sts2Dir)' != ''">$(Sts2Dir)\mods\$(MSBuildProjectName)</ModDeployDir>
         <RitsuLibDeployDir Condition="'$(Sts2Dir)' != ''">$(Sts2Dir)\mods\STS2-RitsuLib</RitsuLibDeployDir>
     </PropertyGroup>
@@ -78,8 +78,9 @@
                 Placeholders="@ModVersion@;@Sts2Version@"
                 Values="$(ModVersion);$(Sts2Version)"/>
         <Exec Command="&quot;$(GodotExe)&quot; --headless --export-pack BasicExport &quot;$(ModOutputDir)\$(MSBuildProjectName).pck&quot; --path &quot;$(MSBuildProjectDirectory)&quot;" ContinueOnError="true"/>
-        <ZipDirectory SourceDirectory="$(ModOutputDir)\.."
-                      DestinationFile="$(ModOutputDir)\..\..\$(MSBuildProjectName)-$(ModVersion).zip"
+        <MakeDir Directories="$(ModOutputDir)\..\artifacts"/>
+        <ZipDirectory SourceDirectory="$(ModOutputDir)"
+                      DestinationFile="$(ModOutputDir)\..\artifacts\$(MSBuildProjectName)-$(ModVersion).zip"
                       Overwrite="true"/>
     </Target>
 

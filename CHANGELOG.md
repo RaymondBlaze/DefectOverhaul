@@ -1,14 +1,15 @@
 # Changelog
 
-## Unreleased
+## 0.100.2
 
-<details>
-<summary>English</summary>
-</details>
+支持杀戮尖塔2正式版 v0.107.1。
+Supports STS2 main branch v0.107.1.
 
-<details>
-<summary>简体中文</summary>
-</details>
+### 修改 (Changes)
+为了兼容创意工坊的发布工作流，修改了GitHub Release的打包方式，现在ZIP内不再嵌套一层`DefectOverhaul`文件夹，手动安装时请自行
+创建文件夹。
+Changed the way how GitHub Release ZIP is packaged for workflow compatibility with the Steam Workshop Release, it now 
+does NOT include a `DefectOverhaul` folder, create one yourself when installing the mod manually.
 
 ## 0.100.1
 

@@ -1,19 +1,13 @@
-"""Project path resolution — all paths cached after first call."""
-
 import xml.etree.ElementTree as ET
 from functools import cache
 from pathlib import Path
 
-# bootstrap anchor
-_THIS_DIR = Path(__file__).resolve().parent      # scripts/utils/
-_SCRIPTS_DIR = _THIS_DIR.parent                   # scripts/
+SCRIPTS_DIR = Path(__file__).resolve().parent.parent
 
-
-# basic paths
 
 @cache
 def scripts_dir() -> Path:
-    return _SCRIPTS_DIR
+    return SCRIPTS_DIR
 
 
 @cache
@@ -41,16 +35,34 @@ def libs_dir() -> Path:
     return root_dir() / "libs"
 
 
-# local.props
+@cache
+def build_dir() -> Path:
+    return root_dir() / "build"
 
-_LOCAL_PROPS = root_dir() / "godot" / "local.props"
+@cache
+def release_dir() -> Path:
+    return build_dir() / "release"
+
+
+@cache
+def workshop_dir() -> Path:
+    return root_dir() / "workshop"
+
+
+@cache
+def changelog_path() -> Path:
+    return root_dir() / "CHANGELOG.md"
+
+
+
+LOCAL_PROPS_PATH = root_dir() / "godot" / "local.props"
 
 
 @cache
 def _local_props_value(tag: str) -> str | None:
-    if not _LOCAL_PROPS.is_file():
+    if not LOCAL_PROPS_PATH.is_file():
         return None
-    tree = ET.parse(str(_LOCAL_PROPS))
+    tree = ET.parse(str(LOCAL_PROPS_PATH))
     pg = tree.getroot().find("PropertyGroup")
     if pg is None:
         return None

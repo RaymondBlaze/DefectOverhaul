@@ -1,9 +1,3 @@
-"""Run all lib update steps in sequence: game DLLs → NuGet packages → PCK.
-
-Usage:
-    python scripts/libs/update_libs.py
-"""
-
 import shutil
 import subprocess
 import sys
@@ -57,13 +51,13 @@ def copy_dll_for_mcp(dll_path: Path, output_dir: Path) -> None:
 
 def main() -> None:
     step("Updating game libs reference")
-    from libs.update_game_libs import main as step_game
+    from libs.extract_game_libs import main as step_game
     step_game()
 
     print()
 
     step("Updating NuGet packages reference")
-    from libs.update_nuget_packages import main as step_nuget
+    from libs.extract_nuget_packages import main as step_nuget
     step_nuget()
 
     print()

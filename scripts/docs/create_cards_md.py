@@ -1,12 +1,3 @@
-"""
-create_cards_md.py
-
-Generate CARDS.md for each language with card images and localized names.
-
-Usage:
-    python scripts/docs/create_cards_md.py
-"""
-
 import json
 import os
 import re

@@ -1,11 +1,3 @@
-"""Update NuGet package DLLs (GodotSharp, STS2.RitsuLib): decompile to
-libs/<name>/src, then copy DLL (and PDB) to libs/<name>/bin/ for
-ILSpy MCP tool access.
-
-Usage:
-    python scripts/libs/update_nuget_packages.py
-"""
-
 import json
 import sys
 from pathlib import Path

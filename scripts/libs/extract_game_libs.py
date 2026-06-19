@@ -1,10 +1,3 @@
-"""Update game DLLs (sts2, 0Harmony, etc.): decompile to libs/<name>/src,
-then copy DLL (and PDB) to libs/<name>/bin/ for ILSpy MCP tool access.
-
-Usage:
-    python scripts/libs/update_game_libs.py
-"""
-
 import json
 import sys
 from pathlib import Path

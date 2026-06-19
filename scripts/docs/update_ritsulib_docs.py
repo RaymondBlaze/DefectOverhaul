@@ -1,14 +1,3 @@
-"""
-update_ritsulib_docs.py
-
-Download RitsuLib documentation from GitHub and extract content for a
-specific language (default: zh-CN) from the bilingual Valaxy markdown source.
-
-Usage:
-    python scripts/docs/update_ritsulib_docs.py
-    python scripts/docs/update_ritsulib_docs.py --lang en
-"""
-
 import re
 import sys
 import tempfile

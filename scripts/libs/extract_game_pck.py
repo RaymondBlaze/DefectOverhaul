@@ -1,9 +1,3 @@
-"""Extract game PCK to libs/sts2/resources.
-
-Usage:
-    python scripts/libs/extract_game_pck.py
-"""
-
 import sys
 from pathlib import Path
 

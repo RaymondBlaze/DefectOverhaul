@@ -1,12 +1,3 @@
-"""
-update_modding_tutorials.py
-
-Download modding tutorials from GitHub to docs/tutorials/.
-
-Usage:
-    python scripts/docs/update_modding_tutorials.py
-"""
-
 import shutil
 import sys
 import tempfile
