@@ -25,6 +25,7 @@ def release(version: str, changelog: str) -> None:
     try:
         result = subprocess.run(
             ["gh", "release", "create", version, str(artifact_path),
+             "--title", f"v{version}",
              "--notes-file", changelog_path],
             capture_output=True, text=True,
         )
@@ -35,6 +36,7 @@ def release(version: str, changelog: str) -> None:
         ok(f"Successfully created GitHub Release")
     finally:
         Path(changelog_path).unlink(missing_ok=True)
+
 
 def main():
     step("Building mod")
@@ -54,6 +56,7 @@ def main():
     changelog = resolve_changelog(version)
 
     release(version, changelog)
-        
+
+
 if __name__ == '__main__':
     main()
