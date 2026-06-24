@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.100.3
+
+支持杀戮尖塔2正式版 v0.107.1。
+Supports STS2 main branch v0.107.1.
+
+### 修复 (Fixes)
+- 修复了卡牌本地化修改失效的问题
+  Fixed Card localization patches being invalid
+
 ## 0.100.2
 
 支持杀戮尖塔2正式版 v0.107.1。

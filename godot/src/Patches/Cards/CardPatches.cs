@@ -37,7 +37,7 @@ public static class CardPatches {
     internal static void Initialize() {
         LoadConfig();
         PatchAll();
-        RitsuLibFramework.SubscribeLifecycle<GameReadyEvent>(_ => {
+        RitsuLibFramework.SubscribeLifecycle<EssentialInitializationCompletedEvent>(_ => {
                 PatchLocalization();
                 LocManager.Instance.SubscribeToLocaleChange(PatchLocalization);
             }
