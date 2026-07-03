@@ -52,7 +52,7 @@ public static class AdaptiveStrikePatch {
 
         private static async Task OnPlay(AdaptiveStrike card, PlayerChoiceContext choiceContext, CardPlay cardPlay) {
             ArgumentNullException.ThrowIfNull(cardPlay.Target);
-            await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard(card).Targeting(cardPlay.Target)
+            await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard(card, cardPlay).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
             var selectedCards = (await CardSelectCmd.FromCombatPile(
                 choiceContext,

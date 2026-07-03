@@ -23,6 +23,9 @@
   "FTL": {
     "FTL.description": "造成{Damage:diff()}点伤害。\n将你[gold]抽牌堆[/gold]中的一张随机0{energyPrefix:energyIcons(1)}牌放入你的[gold]手牌[/gold]。"
   },
+  "FUEL": {
+    "FUEL.description": "获得{Energy:energyIcons()}。\n抽{Cards:diff()}张牌。"
+  },
   "HAILSTORM": {
     "HAILSTORM.description": "[gold]生成[/gold]{Repeat:diff()}个[gold]冰霜[/gold]充能球。\n每当你从[gold]冰霜[/gold]充能球获得[gold]格挡[/gold]时，对随机敌人造成等量的伤害。"
   },
@@ -42,7 +45,7 @@
     "LEAP.description": "获得{Block:diff()}点[gold]格挡[/gold]。\n这张牌的耗能降为0{energyPrefix:energyIcons(1)}。"
   },
   "LOOP": {
-    "LOOP.description": "在你的回合结束时，额外触发你所有的充能球的被动1次。"
+    "LOOP.description": "在你的回合结束时，额外触发你所有充能球的被动一次。"
   },
   "RAINBOW": {
     "RAINBOW.description": "[gold]生成[/gold]1个[gold]闪电[/gold]充能球。\n[gold]生成[/gold]1个[gold]冰霜[/gold]充能球。\n[gold]生成[/gold]1个[gold]黑暗[/gold]充能球。\n每当你[gold]生成[/gold]充能球时，此牌耗能在下一次打出前减少{Energy:energyIcons()}。"

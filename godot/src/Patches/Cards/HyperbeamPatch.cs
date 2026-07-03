@@ -1,5 +1,6 @@
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -55,14 +56,14 @@ public static class HyperbeamPatch {
             return [new ModPatchTarget(typeof(Hyperbeam), "OnPlay")];
         }
 
-        public static bool Prefix(ref Task __result, Hyperbeam __instance, PlayerChoiceContext choiceContext) {
-            __result = OnPlay(__instance, choiceContext);
+        public static bool Prefix(ref Task __result, Hyperbeam __instance, PlayerChoiceContext choiceContext, CardPlay cardPlay) {
+            __result = OnPlay(__instance, choiceContext, cardPlay);
             return false;
         }
 
-        private static async Task OnPlay(Hyperbeam card, PlayerChoiceContext choiceContext) {
+        private static async Task OnPlay(Hyperbeam card, PlayerChoiceContext choiceContext, CardPlay cardPlay) {
             await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue)
-                .FromCard(card)
+                .FromCard(card, cardPlay)
                 .TargetingAllOpponents(card.CombatState!)
                 .WithAttackerAnim("Cast", 0.5f)
                 .BeforeDamage(

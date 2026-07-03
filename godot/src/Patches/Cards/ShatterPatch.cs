@@ -1,5 +1,6 @@
 using DefectOverhaul.Patches.Transpilers;
 using HarmonyLib;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -26,6 +27,19 @@ public static class ShatterPatch {
 
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) {
             return CardModelConstructorTranspiler.ModifyArgs(instructions, 2);
+        }
+    }
+
+    public sealed class ShatterCanonicalKeywords : IPatchMethod {
+        public static string PatchId => "Shatter.CanonicalKeywords";
+
+        public static ModPatchTarget[] GetTargets() {
+            return [new ModPatchTarget(typeof(Shatter), "CanonicalKeywords", MethodType.Getter)];
+        }
+
+        public static bool Prefix(ref IEnumerable<CardKeyword> __result) {
+            __result = [];
+            return false;
         }
     }
 

@@ -23,6 +23,9 @@
   "FTL": {
     "FTL.description": "Deal {Damage:diff()} damage.\nPut a random 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold]."
   },
+  "FUEL": {
+    "FUEL.description": "Gain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}."
+  },
   "HAILSTORM": {
     "HAILSTORM.description": "[gold]Channel[/gold] {Repeat:diff()} [gold]Frost[/gold].\nWhenever you gain [gold]Block[/gold] from a [gold]Frost[/gold] Orb, deal that much damage to a random enemy."
   },

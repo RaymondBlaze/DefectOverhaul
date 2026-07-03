@@ -34,7 +34,7 @@ public static class SynthesisPatch {
             ArgumentNullException.ThrowIfNull(cardPlay.Target);
             await DamageCmd
                 .Attack(card.DynamicVars.Damage.BaseValue)
-                .FromCard(card)
+                .FromCard(card, cardPlay)
                 .Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);

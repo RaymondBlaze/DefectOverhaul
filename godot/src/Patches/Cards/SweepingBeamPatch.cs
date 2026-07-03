@@ -63,7 +63,7 @@ public static class SweepingBeamPatch {
             await CreatureCmd.TriggerAnim(card.Owner.Creature, "Attack", card.Owner.Character.AttackAnimDelay);
             await DamageCmd
                 .Attack(card.DynamicVars.Damage.BaseValue)
-                .FromCard(card)
+                .FromCard(card, cardPlay)
                 .TargetingAllOpponents(card.CombatState!)
                 .WithAttackerAnim("Cast", 0.5f)
                 .BeforeDamage(

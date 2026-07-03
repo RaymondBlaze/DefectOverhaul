@@ -12,7 +12,7 @@ namespace DefectOverhaul.Patches.Cards;
 public static class CardPatches {
     private const string configKey = "config/card_patches";
     private const string configFile = "config/card_patches.json";
-    private const string locPath = "res://DefectOverhaul/card_patches/localization";
+    private const string locPath = "res://DefectOverhaul/localization/card_patches";
     private static readonly string[] patchedLocTables = ["cards", "powers"];
 
     private static readonly List<(Type Type, CardPatchAttribute Patch)> scanResults = [];

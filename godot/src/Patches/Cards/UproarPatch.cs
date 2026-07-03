@@ -33,7 +33,9 @@ public static class UproarPatch {
 
         private static async Task OnPlay(Uproar card, PlayerChoiceContext choiceContext, CardPlay cardPlay) {
             ArgumentNullException.ThrowIfNull(cardPlay.Target);
-            await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard(card).WithHitCount(2)
+            await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue)
+                .FromCard(card, cardPlay)
+                .WithHitCount(2)
                 .Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);

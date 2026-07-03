@@ -20,8 +20,8 @@
     "HAILSTORM_POWER.smartDescription": "每当你从[gold]冰霜[/gold]充能球获得[gold]格挡[/gold]时，对随机敌人造成等量的伤害[blue]{Amount}[/blue]次。"
   },
   "LOOP": {
-    "LOOP_POWER.description": "在你的回合结束时，额外触发你所有的充能球的被动。",
-    "LOOP_POWER.smartDescription": "在你的回合结束时，额外触发你所有的充能球的被动[blue]{Amount}[/blue]次。"
+    "LOOP_POWER.description": "在你的回合结束时，额外触发你所有充能球的被动。",
+    "LOOP_POWER.smartDescription": "在你的回合结束时，额外触发你所有充能球的被动[blue]{Amount}[/blue]次。"
   },
   "SMOKESTACK": {
     "SMOKESTACK_POWER.description": "状态牌获得[gold]虚无[/gold]。每当你[gold]消耗[/gold]一张状态牌，获得[gold]格挡[/gold]。",

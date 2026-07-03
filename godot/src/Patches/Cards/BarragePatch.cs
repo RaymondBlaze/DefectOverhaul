@@ -69,7 +69,7 @@ public static class BarragePatch {
         private static async Task OnPlay(Barrage card, PlayerChoiceContext choiceContext, CardPlay cardPlay) {
             await DamageCmd
                 .Attack(card.DynamicVars.Damage.BaseValue)
-                .FromCard(card)
+                .FromCard(card, cardPlay)
                 .TargetingAllOpponents(card.CombatState!)
                 .WithHitCount((int)((CalculatedVar)card.DynamicVars["CalculatedHits"]).Calculate(cardPlay.Target))
                 .WithHitFx("vfx/vfx_attack_blunt")

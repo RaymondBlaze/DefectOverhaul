@@ -63,7 +63,7 @@ public static class FtlPatch {
             ArgumentNullException.ThrowIfNull(cardPlay.Target);
             await DamageCmd
                 .Attack(card.DynamicVars.Damage.BaseValue)
-                .FromCard(card).Targeting(cardPlay.Target)
+                .FromCard(card, cardPlay).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
             var cardsToAdd = PileType.Draw

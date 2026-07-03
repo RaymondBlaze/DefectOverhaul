@@ -77,7 +77,7 @@ public static class IceLancePatch {
             ArgumentNullException.ThrowIfNull(cardPlay.Target);
             await DamageCmd
                 .Attack(card.DynamicVars.CalculatedDamage.Calculate(cardPlay.Target))
-                .FromCard(card)
+                .FromCard(card, cardPlay)
                 .Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);

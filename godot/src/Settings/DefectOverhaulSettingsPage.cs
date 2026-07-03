@@ -9,7 +9,7 @@ namespace DefectOverhaul.Settings;
 public static class DefectOverhaulSettingsPage {
     private static readonly I18N i18N = new(
         $"{Consts.ModId}.Settings",
-        pckFolders: ["res://DefectOverhaul/settings/localization"]
+        pckFolders: ["res://DefectOverhaul/localization/settings"]
     );
 
     internal static ModSettingsText Loc(string key, string fallback) {

@@ -7,8 +7,8 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <ModVersion>0.100.3</ModVersion>
-        <Sts2Version>0.107.0</Sts2Version>
+        <ModVersion>0.101.0</ModVersion>
+        <Sts2Version>0.108.0</Sts2Version>
         <Sts2DataDir Condition="'$(Sts2DataDir)' == '' and '$(Sts2Dir)' != ''">$(Sts2Dir)\data_sts2_windows_x86_64</Sts2DataDir>
         <ModOutputDir Condition="'$(ModOutputDir)' == ''">$(MSBuildProjectDirectory)\..\build\release\content</ModOutputDir>
         <ModDeployDir Condition="'$(Sts2Dir)' != ''">$(Sts2Dir)\mods\$(MSBuildProjectName)</ModDeployDir>
@@ -36,6 +36,10 @@
         <None Include="project.godot"/>
         <None Include="export_presets.cfg"/>
         <None Include="local.props.template"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="DefectOverhaul\localization\card_patches\" />
     </ItemGroup>
 
     <UsingTask TaskName="GenerateFromTemplate" TaskFactory="RoslynCodeTaskFactory"

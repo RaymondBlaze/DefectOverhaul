@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.101.0
+
+支持杀戮尖塔2测试版 v0.108.0。
+Supports STS2 beta branch v0.108.0.
+
+### 卡牌修改 (Card Changes)
+
+#### 燃料 (Fuel)
+
+- 原效果（0.108.0）：获得1（2）点能量。
+- 新效果（回调至0.107.1）：获得1点能量。抽1（2）张牌。
+- Original Effect (0.108.0): Gain 1(2) Energy.
+- New Effect (Reverted to 0.107.1): Gain 1 Energy. Draw 1(2) card(s).
+
 ## 0.100.3
 
 支持杀戮尖塔2正式版 v0.107.1。
